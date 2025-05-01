@@ -1,0 +1,178 @@
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Basic CSS Reset */
+body, h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Header & Navbar */
+header {
+    background: #1f1f1f;
+    padding: 10px 0;
+}
+
+.navbar {
+    max-width: 95%;
+    margin: 0 auto;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #FF0000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #ffffff;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    max-width: 95%;
+    margin: 40px auto;
+    gap: 0;
+}
+.hero-image {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+}
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.hero-content {
+    flex: 0 0 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
+    text-align: center;        /* center text lines */
+}
+.hero-content h1 {
+    font-size: 2rem;
+    color: #FF0000;
+    margin-bottom: 10px;
+}
+.hero-content p {
+    font-size: 1rem;
+    color: #b0b0b0;
+}
+
+/* BENEFITS (Cards) */
+.benefits {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 30px 0 40px;
+}
+.benefits-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 95%;
+    margin: 40px auto 0;
+}
+.benefits-list li {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Fixed-size image box */
+.benefit-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+.benefit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.benefits-list h3 {
+    font-size: 1.2rem;
+    color: #FF0000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.benefits-list p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Description under cards */
+.benefits-description {
+    margin: 20px auto 0;
+    font-size: 1rem;
+    color: #b0b0b0;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #b0b0b0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .benefits-list li {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image,
+    .hero-content {
+        flex: 0 0 100%;
+    }
+    .benefits-list {
+        flex-direction: column;
+        max-width: 95%;
+    }
+    .benefits-list li {
+        flex: 1 1 100%;
+    }
+}
