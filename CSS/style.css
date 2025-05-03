@@ -1,6 +1,7 @@
 /* Prevent horizontal scroll */
 html, body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Basic CSS Reset */
@@ -49,9 +50,10 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: #1e1e1e;
-    max-width: 95%;
+    max-width: 97.5%;
     margin: 40px auto;
     gap: 0;
+    overflow: hidden;
 }
 .hero-image {
     flex: 0 0 50%;
@@ -68,9 +70,9 @@ header {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* vertical center */
-    align-items: center;       /* horizontal center */
-    text-align: center;        /* center text lines */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .hero-content h1 {
     font-size: 2rem;
@@ -84,9 +86,11 @@ header {
 
 /* BENEFITS (Cards) */
 .benefits {
+    margin: auto;
     background-color: #1f1f1f;
     text-align: center;
     padding: 30px 0 40px;
+    max-width: 97.5%;
 }
 .benefits-list {
     list-style: none;
@@ -94,7 +98,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 95%;
+    max-width: 97.5%;
     margin: 40px auto 0;
 }
 .benefits-list li {
@@ -107,8 +111,6 @@ header {
     flex-direction: column;
     align-items: center;
 }
-
-/* Fixed-size image box */
 .benefit-image {
     width: 150px;
     height: 150px;
@@ -122,7 +124,6 @@ header {
     height: 100%;
     object-fit: cover;
 }
-
 .benefits-list h3 {
     font-size: 1.2rem;
     color: #FF0000;
@@ -135,8 +136,6 @@ header {
     line-height: 1.4;
     text-align: center;
 }
-
-/* Description under cards */
 .benefits-description {
     margin: 20px auto 0;
     font-size: 1rem;
@@ -144,6 +143,179 @@ header {
     max-width: 800px;
     line-height: 1.6;
 }
+
+/* SUSTAINABILITY SECTION */
+.sustainability {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    width: 97.5%;
+    margin: 40px auto;
+
+    gap: 40px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.sustainability-image {
+
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2%;
+    //border: 2px solid blue;
+}
+.sustainability-image img {
+
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 8px;
+    //border: 2px solid red;
+}
+.sustainability-content {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+}
+.sustainability-content h2 {
+    font-size: 1.8rem;
+    color: #FF0000;
+    margin-bottom: 15px;
+}
+.sustainability-content p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+/* SUSTAINABILITY POINTS SECTION */
+.sustainability-points {
+    background-color: #1f1f1f;
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+.sustainability-points h2 {
+    font-size: 1.8rem;
+    color: #FF0000;
+    margin-bottom: 20px;
+}
+.sustainability-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.sustainability-cards .card {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.sustainability-cards .card h3 {
+    font-size: 1.2rem;
+    color: #FF0000;
+    margin-bottom: 10px;
+}
+.sustainability-cards .card p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.4;
+}
+
+/* INTEGRATION SECTION */
+.integration {
+    background-color: #1f1f1f;
+    max-width: 95%;
+    margin: 40px auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+.integration h2 {
+    font-size: 1.8rem;
+    color: #FF0000;
+    margin-bottom: 15px;
+}
+.integration p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+/* ACCESSIBILITY SECTION */
+.accessibility {
+    background-color: #1e1e1e;
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+.accessibility h2 {
+    font-size: 1.8rem;
+    color: #FF0000;
+    margin-bottom: 20px;
+}
+.accessibility-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+.accessibility .card {
+    flex: 1 1 calc(33% - 20px);
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.accessibility .card img {
+    width: 100%; /* Scale to the width of the parent container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the container */
+    margin-bottom: 10px; /* Add spacing below the image */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+.accessibility .card h3 {
+    font-size: 1.2rem;
+    color: #FF0000;
+    margin-bottom: 10px;
+}
+.accessibility .card p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.4;
+}
+
+/* INTEGRATION SECTIONS */
+.integration {
+    background-color: #1f1f1f;
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+.integration h2 {
+    font-size: 1.8rem;
+    color: #FF0000;
+    margin-bottom: 20px;
+}
+.integration p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
 
 /* Footer */
 footer {
@@ -157,6 +329,24 @@ footer {
     .benefits-list li {
         flex: 1 1 calc(50% - 20px);
     }
+    .accessibility .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+    .sustainability-cards .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+    .sustainability {
+        flex-direction: column;
+    }
+    .sustainability-image,
+    .sustainability-content {
+        flex: 0 0 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .sustainability-content {
+        align-items: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -168,11 +358,15 @@ footer {
     .hero-content {
         flex: 0 0 100%;
     }
-    .benefits-list {
+    .benefits-list,
+    .sustainability-cards,
+    .accessibility-grid {
         flex-direction: column;
         max-width: 95%;
     }
-    .benefits-list li {
+    .benefits-list li,
+    .accessibility .card,
+    .sustainability-cards .card {
         flex: 1 1 100%;
     }
 }
